@@ -74,8 +74,6 @@ func toLower(s string) string {
 }
 
 func normalize(s string) string {
-	// t := transform.Chain(norm.NFD, runes.Remove(runes.In(unicode.Mn)), norm.NFC)
-	// result, _, _ := transform.String(t, s)
 	return godiacritics.Normalize(s)
 }
 
